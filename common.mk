@@ -19,7 +19,10 @@ COMMON_PATH := device/samsung/gta4xl-common
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/gta4xl-common/gta4xl-common-vendor.mk)
 
-PRODUCT_CHARACTERISTICS := tablet
+PRODUCT_CHARACTERISTICS := tv
+USE_OEM_TV_APP := true
+$(call inherit-product, device/google/atv/products/atv_base.mk)
+PRODUCT_IS_ATV := true
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -246,3 +249,18 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(COMMON_PATH)/configs/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \
     $(COMMON_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
+
+PRODUCT_PACKAGES += \
+    TvSampleLeanbackLauncher
+
+PRODUCT_PACKAGES += \
+    LiveTv \
+    google-tv-pairing-protocol \
+    LeanbackSampleApp \
+    tv_input.default \
+    com.android.media.tv.remoteprovider \
+    InputDevices
+
+PRODUCT_PACKAGES += \
+    LeanbackIME
+    
