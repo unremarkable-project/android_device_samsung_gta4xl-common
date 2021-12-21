@@ -21,8 +21,8 @@ $(call inherit-product, vendor/samsung/gta4xl-common/gta4xl-common-vendor.mk)
 
 PRODUCT_CHARACTERISTICS := tv
 USE_OEM_TV_APP := true
-$(call inherit-product, device/google/atv/products/atv_base.mk)
 PRODUCT_IS_ATV := true
+$(call inherit-product, device/lineage/atv/Android.mk  )
 
 # Audio
 PRODUCT_PACKAGES += \
