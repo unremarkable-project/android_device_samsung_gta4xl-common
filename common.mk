@@ -261,7 +261,7 @@ PRODUCT_PACKAGES += \
     tv_input.default \
     com.android.media.tv.remoteprovider \
     InputDevices \
-    corkboard
+    Testapk
 
 PRODUCT_PACKAGES += \
     LeanbackIME
