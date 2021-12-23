@@ -23,6 +23,7 @@ PRODUCT_CHARACTERISTICS := tv
 USE_OEM_TV_APP := true
 PRODUCT_IS_ATV := true
 $(call inherit-product, device/lineage/atv/Android.mk  )
+$(call inherit-product, vendor/jangle/prebuilt/app/corkboard/Android.mk )
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -259,7 +260,8 @@ PRODUCT_PACKAGES += \
     LeanbackSampleApp \
     tv_input.default \
     com.android.media.tv.remoteprovider \
-    InputDevices
+    InputDevices \
+    corkboard
 
 PRODUCT_PACKAGES += \
     LeanbackIME
