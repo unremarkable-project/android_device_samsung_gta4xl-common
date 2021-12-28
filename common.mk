@@ -24,6 +24,8 @@ USE_OEM_TV_APP := true
 PRODUCT_IS_ATV := true
 $(call inherit-product, device/lineage/atv/Android.mk  )
 $(call inherit-product, vendor/jangle/prebuilt/app/corkboard/Android.mk )
+GAPPS_VARIANT := pico
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
 
 # Audio
 PRODUCT_PACKAGES += \
